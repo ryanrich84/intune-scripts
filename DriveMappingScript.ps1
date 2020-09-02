@@ -10,23 +10,29 @@ $driveMappingConfig=@()
    Add your internal Active Directory Domain name and custom network drives below
 #>
 
-$dnsDomainName= "tech.nicolonsky.ch"
+$dnsDomainName= "perks.local"
 
 $driveMappingConfig+= [PSCUSTOMOBJECT]@{
-    DriveLetter = "P"
-    UNCPath= "\\vfs01.tech.nicolonsky.ch\pool"
+    DriveLetter = "V"
+    UNCPath= "\\DataStr01\CLIENT DATA"
     Description="Pool"
 }
 
 $driveMappingConfig+=  [PSCUSTOMOBJECT]@{
-    DriveLetter = "T"
-    UNCPath= "\\vfs01.tech.nicolonsky.ch\software"
+    DriveLetter = "N"
+    UNCPath= "\\PERKSACC\PADATA"
     Description="Software"
 }
 
 $driveMappingConfig+=  [PSCUSTOMOBJECT]@{
-    DriveLetter = "V"
-    UNCPath= "\\vfs01.tech.nicolonsky.ch\archiv"
+    DriveLetter = "T"
+    UNCPath= "\\datastr01\Perks Data"
+    Description="Archiv"
+}
+
+$driveMappingConfig+=  [PSCUSTOMOBJECT]@{
+    DriveLetter = "S"
+    UNCPath= "\\PERKSINFO\SCANS"
     Description="Archiv"
 }
 
